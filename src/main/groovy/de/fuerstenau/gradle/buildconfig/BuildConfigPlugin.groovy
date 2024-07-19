@@ -67,7 +67,7 @@ class BuildConfigPlugin implements Plugin<Project>
    private Configuration getCompileConfiguration (BuildConfigSourceSet cfg)
    {
       String configurationName = MAIN_SOURCESET.equals (cfg.name) ?\
-            "compile" : "${cfg.name}Compile"
+            "implementation" : "${cfg.name}Implementation"
       try
       {
          p.configurations.getByName (configurationName)
