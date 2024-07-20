@@ -221,6 +221,9 @@ class BuildConfigPlugin implements Plugin<Project>
             }
          }
 
+         p.tasks.named("jar", AbstractCopyTask.class) {
+            duplicatesStrategy = DuplicatesStrategy.INCLUDE
+         }
 
          LOG.debug "BuildConfigPlugin loaded"
       }
